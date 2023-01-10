@@ -271,6 +271,36 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
               ),
             ),
           ),
+          Container(
+            color: Color(0xff00A884),
+            width: double.infinity,
+            height: 40,
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.mail,
+                      color: Colors.white,
+                    ),
+                    spacingWidth4,
+                    Text(
+                      textAlign: TextAlign.center,
+                      "WHATSAPP MESSAGE",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12.0,
+                        letterSpacing: 1,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
           spacingHeigth8,
 
           InkWell(
