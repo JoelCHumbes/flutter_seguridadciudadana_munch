@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:seguridad_ciudadana/utils/general/colors.dart';
 import 'package:seguridad_ciudadana/widgets/form_directorio_widgets.dart';
 import 'package:seguridad_ciudadana/widgets/sizebox_widget.dart';
 
@@ -17,6 +18,43 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Container(
+        padding: EdgeInsets.symmetric(horizontal: 0.0,vertical: 4.0),
+        decoration: BoxDecoration(
+          color: kBrandSecondaryColor,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(28.0),
+            topRight: Radius.circular(28.0),
+          ),
+        ),
+        child: BottomNavigationBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          type: BottomNavigationBarType.fixed,
+          unselectedLabelStyle: TextStyle(
+            color: Colors.white70,
+          ),
+          unselectedItemColor: Colors.white70,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.add_alert_rounded),
+              label: "Emergencia"
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.adb_sharp),
+              label: "Alerta"
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_balance),
+                label: "Notificacion"
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_balance),
+                label: "Otros"
+            ),
+          ],
+        ),
+      ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -31,10 +69,10 @@ class HomePage extends StatelessWidget {
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    // color: const Color(0xff6A6A6C),
+                      // color: const Color(0xff6A6A6C),
                       color: const Color(0xff4CB051),
-                      blurRadius: 15.0,
-                      offset: const Offset(0, 7.0)),
+                      blurRadius: 10.0,
+                      offset: const Offset(0, 3.0)),
                 ],
               ),
               child: Icon(
@@ -50,7 +88,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              flex: 2,
+              flex: 1,
               child: Lottie.asset(
                 "assets/lottie/security.json",
               ),
@@ -67,10 +105,9 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 child: SingleChildScrollView(
-
                   child: Column(
                     children: [
-                      spacingHeigth18,
+                      spacingHeigth12,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -86,8 +123,8 @@ class HomePage extends StatelessWidget {
                                   BoxShadow(
                                       // color: const Color(0xff6A6A6C),
                                       color: const Color(0xff4CB051),
-                                      blurRadius: 15.0,
-                                      offset: const Offset(0, 7.0)),
+                                      blurRadius: 10.0,
+                                      offset: const Offset(0, 3.0)),
                                 ],
                               ),
                               child: Padding(
@@ -127,8 +164,8 @@ class HomePage extends StatelessWidget {
                                   BoxShadow(
                                       // color: const Color(0xff6A6A6C),
                                       color: const Color(0xff3A3434),
-                                      blurRadius: 15.0,
-                                      offset: const Offset(0, 7.0)),
+                                      blurRadius: 10.0,
+                                      offset: const Offset(0, 3.0)),
                                 ],
                               ),
                               child: Padding(
@@ -157,7 +194,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      spacingHeigth18,
+                      spacingHeigth12,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -167,14 +204,14 @@ class HomePage extends StatelessWidget {
                               height: 150,
                               width: 150,
                               decoration: BoxDecoration(
-                                color: Color(0xff0CB7F2),
+                                color: Color(0xffFEE5E9),
                                 borderRadius: BorderRadius.circular(20),
                                 boxShadow: [
                                   BoxShadow(
                                       // color: const Color(0xff6A6A6C),
-                                      color: const Color(0xff0CB7F2),
-                                      blurRadius: 15.0,
-                                      offset: const Offset(0, 7.0)),
+                                      color: const Color(0xffB6B6B6),
+                                      blurRadius: 10.0,
+                                      offset: const Offset(0, 3.0)),
                                 ],
                               ),
                               child: Padding(
@@ -191,7 +228,7 @@ class HomePage extends StatelessWidget {
                                       textAlign: TextAlign.center,
                                       "AMBULANCIA \n 106",
                                       style: TextStyle(
-                                        color: Colors.white,
+                                        color: Color(0xff4D4D4D),
                                         fontWeight: FontWeight.bold,
                                         fontSize: 12,
                                       ),
@@ -214,8 +251,8 @@ class HomePage extends StatelessWidget {
                                   BoxShadow(
                                       // color: const Color(0xff6A6A6C),
                                       color: const Color(0xffF2C32D),
-                                      blurRadius: 15.0,
-                                      offset: const Offset(0, 7.0)),
+                                      blurRadius: 10.0,
+                                      offset: const Offset(0, 3.0)),
                                 ],
                               ),
                               child: Padding(
@@ -244,7 +281,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      spacingHeigth18,
+                      spacingHeigth12,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -258,10 +295,10 @@ class HomePage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20),
                                 boxShadow: [
                                   BoxShadow(
-                                    // color: const Color(0xff6A6A6C),
+                                      // color: const Color(0xff6A6A6C),
                                       color: const Color(0xffBEBEBE),
-                                      blurRadius: 15.0,
-                                      offset: const Offset(0, 7.0)),
+                                      blurRadius: 10.0,
+                                      offset: const Offset(0, 3.0)),
                                 ],
                               ),
                               child: Padding(
@@ -299,10 +336,10 @@ class HomePage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20),
                                 boxShadow: [
                                   BoxShadow(
-                                    // color: const Color(0xff6A6A6C),
+                                      // color: const Color(0xff6A6A6C),
                                       color: const Color(0xff3949AB),
-                                      blurRadius: 15.0,
-                                      offset: const Offset(0, 7.0)),
+                                      blurRadius: 10.0,
+                                      offset: const Offset(0, 3.0)),
                                 ],
                               ),
                               child: Padding(
@@ -331,7 +368,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      spacingHeigth18,
+                      spacingHeigth12,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -345,10 +382,10 @@ class HomePage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20),
                                 boxShadow: [
                                   BoxShadow(
-                                    // color: const Color(0xff6A6A6C),
+                                      // color: const Color(0xff6A6A6C),
                                       color: const Color(0xffFF1B82),
-                                      blurRadius: 15.0,
-                                      offset: const Offset(0, 7.0)),
+                                      blurRadius: 10.0,
+                                      offset: const Offset(0, 3.0)),
                                 ],
                               ),
                               child: Padding(
@@ -386,10 +423,10 @@ class HomePage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20),
                                 boxShadow: [
                                   BoxShadow(
-                                    // color: const Color(0xff6A6A6C),
+                                      // color: const Color(0xff6A6A6C),
                                       color: const Color(0xff872400),
-                                      blurRadius: 15.0,
-                                      offset: const Offset(0, 7.0)),
+                                      blurRadius: 10.0,
+                                      offset: const Offset(0, 3.0)),
                                 ],
                               ),
                               child: Padding(
@@ -418,8 +455,6 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       ),
-
-
                     ],
                   ),
                 ),

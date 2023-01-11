@@ -101,8 +101,8 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                       BoxShadow(
                           // color: const Color(0xff6A6A6C),
                           color: const Color(0xffFF9557),
-                          blurRadius: 15.0,
-                          offset: const Offset(0, 7.0)),
+                          blurRadius: 10.0,
+                          offset: const Offset(0, 3.0)),
                     ],
                   ),
                   child: Padding(
@@ -144,8 +144,8 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                       BoxShadow(
                           // color: const Color(0xff6A6A6C),
                           color: const Color(0xff0CB7F2),
-                          blurRadius: 15.0,
-                          offset: const Offset(0, 7.0)),
+                          blurRadius: 10.0,
+                          offset: const Offset(0, 3.0)),
                     ],
                   ),
                   child: Padding(
@@ -191,8 +191,8 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                       BoxShadow(
                           // color: const Color(0xff6A6A6C),
                           color: const Color(0xff004882),
-                          blurRadius: 15.0,
-                          offset: const Offset(0, 7.0)),
+                          blurRadius: 10.0,
+                          offset: const Offset(0, 3.0)),
                     ],
                   ),
                   child: Padding(
@@ -218,6 +218,7 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                   ),
                 ),
               ),
+              spacingWidth10,
               InkWell(
                 onTap: () {
                   FlutterPhoneDirectCaller.callNumber(_numberComisaria.text);
@@ -231,8 +232,8 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                       BoxShadow(
                           // color: const Color(0xff6A6A6C),
                           color: const Color(0xff01A884),
-                          blurRadius: 15.0,
-                          offset: const Offset(0, 7.0)),
+                          blurRadius: 10.0,
+                          offset: const Offset(0, 3.0)),
                     ],
                   ),
                   child: Padding(
@@ -280,8 +281,8 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                   BoxShadow(
                     // 1BD741 color: const Color(0xff6A6A6C),
                       color: const Color(0xff01A884),
-                      blurRadius: 15.0,
-                      offset: const Offset(0, 7.0)),
+                      blurRadius: 10.0,
+                      offset: const Offset(0, 3.0)),
                 ],
               ),
               child: Row(
