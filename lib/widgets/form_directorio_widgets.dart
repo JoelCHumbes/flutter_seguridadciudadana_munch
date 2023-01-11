@@ -86,16 +86,17 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
           ),
           spacingHeigth18,
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               InkWell(
                 onTap: () {
                   FlutterPhoneDirectCaller.callNumber(_numberBomberos.text);
                 },
                 child: Container(
+                  width: 110,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(70),
+                    color: Color(0xffFFC159),
+                    borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
                           // color: const Color(0xff6A6A6C),
@@ -104,21 +105,41 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                           offset: const Offset(0, 7.0)),
                     ],
                   ),
-                  child: Image.asset(
-                    "assets/images/bombero.png",
-                    height: 100,
-                    width: 100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(7.0),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          "assets/images/bombero.png",
+                          height: 100,
+                          width: 100,
+                        ),
+                        Text(
+                          textAlign: TextAlign.center,
+                          "116 \n BOMBEROS",
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            color: Color(0xffFFFFFF),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
+
+              spacingWidth10,
+
               InkWell(
                 onTap: () {
                   FlutterPhoneDirectCaller.callNumber(_numberSamu.text);
                 },
                 child: Container(
+                  width: 110,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(70),
+                    color: Color(0xff0CB7F2),
+                    borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
                           // color: const Color(0xff6A6A6C),
@@ -127,40 +148,33 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                           offset: const Offset(0, 7.0)),
                     ],
                   ),
-                  child: Image.asset(
-                    "assets/images/cruz.png",
-                    height: 100,
-                    width: 100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(7.0),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          "assets/images/cruzroja.png",
+                          height: 100,
+                          width: 100,
+                        ),
+                        Text(
+                          textAlign: TextAlign.center,
+                          "106 \n SAMU",
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            color: Color(0xffFFFFFF),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
             ],
           ),
-          spacingHeigth14,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Text(
-                textAlign: TextAlign.center,
-                "116 \n Bomberos",
-                style: TextStyle(
-                  fontSize: 14.0,
-                  color: Color(0xff6C6C6C),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                textAlign: TextAlign.center,
-                "106 \n Samu",
-                style: TextStyle(
-                  fontSize: 14.0,
-                  color: Color(0xff6C6C6C),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-          spacingHeigth10,
+          spacingHeigth25,
+
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -169,11 +183,10 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                   FlutterPhoneDirectCaller.callNumber(_numberSerenazgo.text);
                 },
                 child: Container(
-                  height: 100,
-                  width: 100,
+                  width: 110,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(70),
+                    color: Color(0xff4E5DC0),
+                    borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
                           // color: const Color(0xff6A6A6C),
@@ -182,10 +195,26 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                           offset: const Offset(0, 7.0)),
                     ],
                   ),
-                  child: Image.asset(
-                    "assets/images/serenazgo.png",
-                    height: 80,
-                    width: 80,
+                  child: Padding(
+                    padding: const EdgeInsets.all(7.0),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          "assets/images/serenazgo.png",
+                          height: 100,
+                          width: 100,
+                        ),
+                        Text(
+                          textAlign: TextAlign.center,
+                          "6803000 \n SERENAZGO",
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            color: Color(0xffFFFFFF),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -194,118 +223,54 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                   FlutterPhoneDirectCaller.callNumber(_numberComisaria.text);
                 },
                 child: Container(
-                  width: 100,
-                  height: 100,
+                  width: 110,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(70),
+                    color: Color(0xff01A884),
+                    borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
                           // color: const Color(0xff6A6A6C),
-                          color: const Color(0xffFFC159),
+                          color: const Color(0xff01A884),
                           blurRadius: 15.0,
                           offset: const Offset(0, 7.0)),
                     ],
                   ),
-                  child: Image.asset(
-                    "assets/images/comisaria.png",
-                    height: 100,
-                    width: 100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(7.0),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          "assets/images/comisaria.png",
+                          height: 100,
+                          width: 100,
+                        ),
+                        Text(
+                          textAlign: TextAlign.center,
+                          "4670184 \n COMISARIA",
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            color: Color(0xffFFFFFF),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
             ],
           ),
-          spacingHeigth14,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Text(
-                textAlign: TextAlign.center,
-                "6803000 \n Serenazgo",
-                style: TextStyle(
-                  fontSize: 14.0,
-                  color: Color(0xff6C6C6C),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                textAlign: TextAlign.center,
-                "4670184 \n Comisaria",
-                style: TextStyle(
-                  fontSize: 14.0,
-                  color: Color(0xff6C6C6C),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-          spacingHeigth8,
-          Container(
-            color: Color(0xff00A884),
-            width: double.infinity,
-            height: 40,
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.call,
-                      color: Colors.white,
-                    ),
-                    spacingWidth4,
-                    Text(
-                      textAlign: TextAlign.center,
-                      "WHATSAPP",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 12.0,
-                        letterSpacing: 1,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Container(
-            color: Color(0xff00A884),
-            width: double.infinity,
-            height: 40,
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.mail,
-                      color: Colors.white,
-                    ),
-                    spacingWidth4,
-                    Text(
-                      textAlign: TextAlign.center,
-                      "WHATSAPP MESSAGE",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 12.0,
-                        letterSpacing: 1,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          spacingHeigth8,
+
+          spacingHeigth35,
 
           InkWell(
-            onTap: (){
-              openWhatsapp();
+            onTap: () async {
+              Uri linkWhatsApp = Uri.parse(
+                  "https://wa.me/51924803433?text=Necesito%20-Ayuda%20Urgente%20PorFavor");
+              await launchUrl(
+                linkWhatsApp,
+                mode: LaunchMode.externalApplication,
+              );
             },
             child: Container(
               decoration: BoxDecoration(
@@ -313,8 +278,8 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                    // color: const Color(0xff6A6A6C),
-                      color: const Color(0xff1BD741),
+                    // 1BD741 color: const Color(0xff6A6A6C),
+                      color: const Color(0xff01A884),
                       blurRadius: 15.0,
                       offset: const Offset(0, 7.0)),
                 ],
@@ -327,12 +292,37 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                     "assets/images/whatsapp.png",
                   ),
                   spacingWidth12,
-                  Text(
-                    "924-803-433",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                 Column(
+                   children: [
+                     Row(
+                       children: [
+                         Icon(
+                           Icons.mail,
+                           color: Colors.black,
+                         ),
+                         spacingWidth4,
+                         Text(
+                           textAlign: TextAlign.center,
+                           "WHATSAPP MESSAGE",
+                           style: TextStyle(
+                             color: Colors.black,
+                             fontWeight: FontWeight.bold,
+                             fontSize: 10.0,
+                             letterSpacing: 1,
+                           ),
+                         ),
+                       ],
+                     ),
+
+                     Text(
+                       "924-803-433",
+                       textAlign: TextAlign.center,
+                       style: TextStyle(
+                         fontWeight: FontWeight.bold,
+                       ),
+                     ),
+                   ],
+                 ),
                 ],
               ),
             ),
@@ -341,32 +331,5 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
       ),
     );
   }
-
-
-
-  openWhatsapp()async{
-    var whatsapp = "+51924803433";
-    var whatsappURL_android = "whatsapp://send?phone="+whatsapp+"&text=hello";
-    var whatsappURL_ios ="https://wa.me/$whatsapp?text=${Uri.parse("Hello")}";
-
-    if(Platform.isIOS){
-
-      if(await canLaunchUrlString(whatsappURL_ios)){
-        await launchUrlString(whatsappURL_ios);
-      }else{
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: new Text("Whatsapp no installed")));
-      }
-
-    }else{
-
-      if(await canLaunchUrlString(whatsappURL_android)){
-        await launchUrlString(whatsappURL_android);
-      }else{
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: new Text("Whatsapp no installed")));
-      }
-
-    }
-  }
-
 
 }
