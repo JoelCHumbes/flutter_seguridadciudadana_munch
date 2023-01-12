@@ -39,6 +39,7 @@ dependencies:
   lottie: ^2.1.0
   flutter_phone_direct_caller: ^2.1.1
   url_launcher: ^6.1.7
+  flutter_svg: ^1.1.6
 
   
 
@@ -69,6 +70,7 @@ flutter:
   assets:
       - assets/images/
       - assets/lottie/
+      - assets/svg/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

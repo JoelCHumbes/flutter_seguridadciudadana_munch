@@ -111,9 +111,10 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                       children: [
                         Image.asset(
                           "assets/images/bombero.png",
-                          height: 100,
-                          width: 100,
+                          height: 70,
+                          width: 80,
                         ),
+                        spacingHeigth8,
                         Text(
                           textAlign: TextAlign.center,
                           "116 \n BOMBEROS",
@@ -154,9 +155,10 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                       children: [
                         Image.asset(
                           "assets/images/cruzroja.png",
-                          height: 100,
-                          width: 100,
+                          height: 70,
+                          width: 80,
                         ),
+                        spacingHeigth8,
                         Text(
                           textAlign: TextAlign.center,
                           "106 \n SAMU",
@@ -201,9 +203,10 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                       children: [
                         Image.asset(
                           "assets/images/serenazgo.png",
-                          height: 100,
-                          width: 100,
+                          height: 70,
+                          width: 80,
                         ),
+                        spacingHeigth8,
                         Text(
                           textAlign: TextAlign.center,
                           "6803000 \n SERENAZGO",
@@ -242,9 +245,10 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                       children: [
                         Image.asset(
                           "assets/images/comisaria.png",
-                          height: 100,
-                          width: 100,
+                          height: 70,
+                          width: 80,
                         ),
+                        spacingHeigth8,
                         Text(
                           textAlign: TextAlign.center,
                           "4670184 \n COMISARIA",
@@ -262,7 +266,7 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
             ],
           ),
 
-          spacingHeigth35,
+          spacingHeigth40,
 
           InkWell(
             onTap: () async {
@@ -280,7 +284,7 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                 boxShadow: [
                   BoxShadow(
                     // 1BD741 color: const Color(0xff6A6A6C),
-                      color: const Color(0xff01A884),
+                      color: const Color(0xff1BD741),
                       blurRadius: 10.0,
                       offset: const Offset(0, 3.0)),
                 ],
@@ -293,36 +297,40 @@ class _FormDirectorioWidgetsState extends State<FormDirectorioWidgets> {
                     "assets/images/whatsapp.png",
                   ),
                   spacingWidth12,
-                 Column(
-                   children: [
-                     Row(
-                       children: [
-                         Icon(
-                           Icons.mail,
-                           color: Colors.black,
-                         ),
-                         spacingWidth4,
-                         Text(
-                           textAlign: TextAlign.center,
-                           "WHATSAPP MESSAGE",
-                           style: TextStyle(
+                 Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: Column(
+                     children: [
+                       Row(
+                         children: [
+                           Icon(
+                             Icons.mail,
                              color: Colors.black,
-                             fontWeight: FontWeight.bold,
-                             fontSize: 10.0,
-                             letterSpacing: 1,
                            ),
-                         ),
-                       ],
-                     ),
-
-                     Text(
-                       "924-803-433",
-                       textAlign: TextAlign.center,
-                       style: TextStyle(
-                         fontWeight: FontWeight.bold,
+                           spacingWidth4,
+                           Text(
+                             textAlign: TextAlign.center,
+                             "WhatsApp Mensajes",
+                             style: TextStyle(
+                               color: Colors.black,
+                               fontWeight: FontWeight.bold,
+                               fontSize: 10.0,
+                               letterSpacing: 1,
+                             ),
+                           ),
+                         ],
                        ),
-                     ),
-                   ],
+
+                       Text(
+                         "924-803-433",
+                         textAlign: TextAlign.center,
+                         style: TextStyle(
+                           fontWeight: FontWeight.bold,
+                           fontSize: 12,
+                         ),
+                       ),
+                     ],
+                   ),
                  ),
                 ],
               ),
