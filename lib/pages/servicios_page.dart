@@ -31,17 +31,17 @@ class ServiciosPage extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      spacingHeigth4,
+                      spacingHeigth8,
                       Text(
                         textAlign: TextAlign.center,
-                        "Selecciona el tipo de Incoveniente \n en la Localidad",
+                        "SELECCIONA EL TIPO DE INCOVENIENTE \n EN LA LOCALIDAD",
                         style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 12,
                           fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
+                          letterSpacing: 2,
                         ),
                       ),
-                      spacingHeigth8,
+                      spacingHeigth10,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

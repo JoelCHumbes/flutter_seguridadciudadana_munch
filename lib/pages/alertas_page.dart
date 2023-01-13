@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:seguridad_ciudadana/widgets/form_reporte_widget.dart';
 import 'package:seguridad_ciudadana/widgets/sizebox_widget.dart';
 
 class AlertasPage extends StatelessWidget {
@@ -35,11 +36,11 @@ class AlertasPage extends StatelessWidget {
                        spacingHeigth4,
                       Text(
                         textAlign: TextAlign.center,
-                        "Selecciona el tipo de Incidente \n que quieres Reportar",
+                        "SELECCIONA EL TIPO DE INCIDENTE \n QUE QUIERES REPORTAR",
                         style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 12,
                           fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
+                          letterSpacing: 2,
                         ),
                       ),
                       spacingHeigth8,
@@ -47,7 +48,9 @@ class AlertasPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => FormReporteWidget(),));
+                            },
                             child: Container(
                               height: 125,
                               width: 130,
