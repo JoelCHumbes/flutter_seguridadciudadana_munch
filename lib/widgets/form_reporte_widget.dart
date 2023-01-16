@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:footer/footer.dart';
+import 'package:footer/footer_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:image_picker/image_picker.dart';
@@ -29,6 +31,106 @@ class _FormReporteWidgetState extends State<FormReporteWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          InkWell(
+            onTap: () {
+              // alertNumerico(context);
+            },
+            child: Container(
+              padding: const EdgeInsets.all(14.0),
+              decoration: BoxDecoration(
+                color: Color(0xffFFFFFF),
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                      // color: const Color(0xff6A6A6C),
+                      color: const Color(0xffF2F2F2),
+                      blurRadius: 10.0,
+                      offset: const Offset(0, 2.0)),
+                ],
+              ),
+              child: Icon(
+                Icons.mic,
+                color: Colors.black,
+              ),
+            ),
+          ),
+          spacingHeigth4,
+          Text(
+            "Audio",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          spacingHeigth8,
+          InkWell(
+            onTap: () {
+              getImageCamera();
+            },
+            child: Container(
+              padding: const EdgeInsets.all(14.0),
+              decoration: BoxDecoration(
+                color: Color(0xffFFFFFF),
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                      // color: const Color(0xff6A6A6C),
+                      color: const Color(0xffF2F2F2),
+                      blurRadius: 10.0,
+                      offset: const Offset(0, 2.0)),
+                ],
+              ),
+              child: Icon(
+                Icons.camera_alt,
+                color: Colors.black,
+              ),
+            ),
+          ),
+          spacingHeigth4,
+          Text(
+            "(+3)Foto",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          spacingHeigth8,
+          InkWell(
+            onTap: () {
+              // alertNumerico(context);
+            },
+            child: Container(
+              padding: const EdgeInsets.all(14.0),
+              decoration: BoxDecoration(
+                color: Colors.green,
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                      // color: const Color(0xff6A6A6C),
+                      color: const Color(0xff4CB051),
+                      blurRadius: 10.0,
+                      offset: const Offset(0, 2.0)),
+                ],
+              ),
+              child: Icon(
+                Icons.send,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          spacingHeigth4,
+          Text(
+            "Enviar",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
       backgroundColor: Color(0xffFAFAFA),
       appBar: AppBar(
         backgroundColor: Color(0xff253252),
@@ -87,12 +189,14 @@ class _FormReporteWidgetState extends State<FormReporteWidget> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-
                       spacingHeigth8,
-
-
-                      _imageFile != null
-                          ? ClipRRect(
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        physics: const BouncingScrollPhysics(),
+                        child: Row(
+                          children: [
+                            _imageFile != null
+                                ? ClipRRect(
                               borderRadius: BorderRadius.circular(14.0),
                               child: Image(
                                 height: 200,
@@ -101,102 +205,83 @@ class _FormReporteWidgetState extends State<FormReporteWidget> {
                                 image: FileImage(File(_imageFile!.path)),
                               ),
                             )
-                          : Placeholder(
+                                : Placeholder(
                               fallbackHeight: 150.0,
                               fallbackWidth: 150.0,
-                              child: Image.asset("assets/images/fott.png"),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Image.asset(
+                                  "assets/images/camr.jpg",
+                                ),
+                              ),
                             ),
-                      Align(
-                        alignment: Alignment.topCenter,
-                        child: Container(
-                          margin: const EdgeInsets.symmetric(
-                              horizontal: 10.0, vertical: 8.0),
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: TextField(
-                                  //controller: _chatController,
-                                  decoration: InputDecoration(
-                                      hintText: "Observaciones",
-                                      hintStyle: TextStyle(
-                                        fontSize: 16.0,
-                                        color: Colors.black38,
-                                      ),
-                                      filled: true,
-                                      fillColor: Colors.white,
-                                      /* prefixIcon: Icon(
-                                        Icons.add_alert_sharp,
-                                        size: 30.0,
-                                        color: Colors.black45,
-                                      ),*/
-                                      suffixIcon: Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          IconButton(
-                                            onPressed: () {},
-                                            icon: Icon(
-                                              Icons.mic,
-                                              size: 30,
-                                              color: Colors.black45,
-                                            ),
-                                          ),
-                                          IconButton(
-                                            onPressed: () {
-                                              getImageCamera();
-                                            },
-                                            icon: Icon(
-                                              Icons.camera_alt,
-                                              size: 30,
-                                              color: Colors.black45,
-                                            ),
-                                          ),
-                                          const SizedBox(
-                                            width: 6.0,
-                                          ),
-                                        ],
-                                      ),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(30.0),
-                                        borderSide: BorderSide.none,
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(30.0),
-                                        borderSide: BorderSide.none,
-                                      )),
+                            spacingWidth4,
+                            InkWell(
+                              onTap: () async {
+                              //  remove_doc_principal();
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Icon(
+                                  Icons.close_outlined,
+                                  color: Colors.white,
                                 ),
                               ),
-                              const SizedBox(
-                                width: 7.0,
+                            ),
+
+                            spacingWidth8,
+
+                            _imageFile != null
+                                ? ClipRRect(
+                              borderRadius: BorderRadius.circular(14.0),
+                              child: Image(
+                                height: 200,
+                                width: 200,
+                                fit: BoxFit.cover,
+                                image: FileImage(File(_imageFile!.path)),
                               ),
-                              GestureDetector(
-                                onTap: () {
-                                  /*   ChatMessageModel chat = ChatMessageModel(
-                                    messageContent: _chatController.text,
-                                    messageType: "me",
-                                  );
-
-                                  chatsMessageList.add(chat);
-
-                                  _chatController.clear();
-
-                                  setState(() {}); */
-                                },
-                                child: Container(
-                                  padding: const EdgeInsets.all(15.0),
-                                  decoration: BoxDecoration(
-                                    color: Color(0xff3949AB),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Icon(
-                                    Icons.send,
-                                    color: Colors.white,
-                                  ),
+                            )
+                                : Placeholder(
+                              fallbackHeight: 150.0,
+                              fallbackWidth: 150.0,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Image.asset(
+                                  "assets/images/camr.jpg",
                                 ),
                               ),
-                            ],
-                          ),
+                            ),
+                            spacingWidth4,
+                            InkWell(
+                              onTap: () async {
+                                //  remove_doc_principal();
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Icon(
+                                  Icons.close_outlined,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+
+
+
+
+
+                          ],
                         ),
                       ),
                     ],

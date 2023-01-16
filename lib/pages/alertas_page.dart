@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:seguridad_ciudadana/widgets/form_pruebaaudio.dart';
+import 'package:seguridad_ciudadana/widgets/form_pruebaaudioo.dart';
 import 'package:seguridad_ciudadana/widgets/form_reporte_widget.dart';
 import 'package:seguridad_ciudadana/widgets/sizebox_widget.dart';
 
@@ -91,7 +93,9 @@ class AlertasPage extends StatelessWidget {
                           ),
                           spacingWidth18,
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => FormPruebaAudios(),));
+                            },
                             child: Container(
                               height: 125,
                               width: 130,

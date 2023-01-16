@@ -12,6 +12,7 @@ SizedBox spacingHeigth25 = const SizedBox(height: 25.0);
 SizedBox spacingHeigth30 = const SizedBox(height: 30.0);
 SizedBox spacingHeigth35 = const SizedBox(height: 35.0);
 SizedBox spacingHeigth40 = const SizedBox(height: 40.0);
+SizedBox spacingHeigth70 = const SizedBox(height: 70.0);
 
 
 SizedBox spacingWidth4 = const SizedBox(width: 4.0);
