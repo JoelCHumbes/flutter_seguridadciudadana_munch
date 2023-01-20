@@ -45,17 +45,27 @@ dependencies:
   google_maps_flutter: ^2.2.1
   image_picker: ^0.8.6
 
+  audioplayers: ^2.0.0
+  flutter_audio_recorder2: ^0.0.2
+  path_provider: ^2.0.11
+  file: ^6.1.4
+  dotted_border: ^2.0.0+3
 
-  flutter_sound: ^8.1.9
-  assets_audio_player: ^3.0.3+3
-  permission_handler: ^8.1.2
-  path: ^1.8.0
-  intl: ^0.17.0
-  footer: ^0.0.4
+  #camera: ^0.9.4+3
+  camera: ^0.10.2
+  video_player: ^2.5.0
+
+  #socket_io_client: ^2.0.1
+  socket_io: ^1.0.1
 
 
 
-  
+
+
+
+
+
+
 
 
 dev_dependencies:

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+SizedBox spacingHeigth2 = const SizedBox(height: 2.0);
 SizedBox spacingHeigth4 = const SizedBox(height: 4.0);
 SizedBox spacingHeigth6 = const SizedBox(height: 6.0);
 SizedBox spacingHeigth8 = const SizedBox(height: 8.0);
@@ -15,6 +16,7 @@ SizedBox spacingHeigth40 = const SizedBox(height: 40.0);
 SizedBox spacingHeigth70 = const SizedBox(height: 70.0);
 
 
+SizedBox spacingWidth2 = const SizedBox(width: 2.0);
 SizedBox spacingWidth4 = const SizedBox(width: 4.0);
 SizedBox spacingWidth6 = const SizedBox(width: 6.0);
 SizedBox spacingWidth8 = const SizedBox(width: 8.0);
