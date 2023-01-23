@@ -7,6 +7,11 @@ class ValidadorPage extends StatelessWidget {
   const ValidadorPage({Key? key}) : super(key: key);
 
   @override
+
+  void initState() {
+
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffFFFFFF),
