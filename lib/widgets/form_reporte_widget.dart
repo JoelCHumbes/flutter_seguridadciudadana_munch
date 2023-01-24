@@ -381,7 +381,7 @@ class _FormReporteWidgetState extends State<FormReporteWidget> {
                                                     children: [
                                                       Column(
                                                         children: [
-                                                          Icon(
+                                                          const Icon(
                                                             Icons
                                                                 .add_a_photo_rounded,
                                                             color: Color(
@@ -390,7 +390,7 @@ class _FormReporteWidgetState extends State<FormReporteWidget> {
                                                           ),
                                                           spacingHeigth4,
                                                           Row(
-                                                            children: [
+                                                            children: const [
                                                               Text(
                                                                 "Añadir otra foto",
                                                                 style:
