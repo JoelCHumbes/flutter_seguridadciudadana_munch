@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:seguridad_ciudadana/pages/home_page.dart';
+import 'package:seguridad_ciudadana/pages/login_page.dart';
 import 'package:seguridad_ciudadana/pages/registro_usuario.dart';
 import 'package:seguridad_ciudadana/widgets/form_directorio_widgets.dart';
 import 'package:seguridad_ciudadana/widgets/sizebox_widget.dart';
@@ -129,10 +131,10 @@ class _InicioPantallaState extends State<InicioPantalla> {
                               mainAxisSize: MainAxisSize.min,
                               children: const [
                                 Text(
-                                  "Morro Solar",
+                                  "Playa Agua Dulce",
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 20.0,
+                                    fontSize: 18.0,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -176,44 +178,50 @@ class _InicioPantallaState extends State<InicioPantalla> {
                 Column(
                   children: [
 
-                    Container(
-                      height: 50.0,
-                      width: 240.0,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 14.0,
-                        vertical: 14.0,
-                      ),
-                      margin: const EdgeInsets.only(right: 12.0),
-                      decoration: BoxDecoration(
-                        color: const Color(0xff006EA3),
-                        borderRadius: BorderRadius.circular(12.0),
-                        boxShadow: const [
-                          BoxShadow(
-                            // color: const Color(0xff6A6A6C),
-                              color: Color(0xffB3B3B3),
-                              blurRadius: 10.0,
-                              offset: Offset(0, 3.0)),
-                        ],
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Icon(
-                            Icons.person,
-                            color: Colors.white,
-                          ),
-                          SizedBox(
-                            width: 5.0,
-                          ),
-                          Text(
-                            textAlign: TextAlign.center,
-                            "Iniciar Sesion",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14.0),
-                          ),
-                        ],
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage(),));
+                      },
+
+                      child: Container(
+                        height: 50.0,
+                        width: 240.0,
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 14.0,
+                          vertical: 14.0,
+                        ),
+                        margin: const EdgeInsets.only(right: 12.0),
+                        decoration: BoxDecoration(
+                          color: const Color(0xff006EA3),
+                          borderRadius: BorderRadius.circular(12.0),
+                          boxShadow: const [
+                            BoxShadow(
+                              // color: const Color(0xff6A6A6C),
+                                color: Color(0xffB3B3B3),
+                                blurRadius: 10.0,
+                                offset: Offset(0, 3.0)),
+                          ],
+                        ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(
+                              Icons.person,
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              width: 5.0,
+                            ),
+                            Text(
+                              textAlign: TextAlign.center,
+                              "Iniciar Sesion",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14.0),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     spacingHeigth14,

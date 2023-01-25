@@ -595,6 +595,190 @@ class FormDatosFamiliares extends StatelessWidget {
                         ),
                         spacingHeigth4,
                         Row(
+                          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "Telefono",
+                                        style: TextStyle(
+                                          color: Color(0xff184F78),
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  spacingHeigth4,
+                                  Container(
+                                    width: 170,
+                                    padding:
+                                    const EdgeInsets.symmetric(horizontal: 0.0),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: TextFormField(
+                                      maxLength: 7,
+                                      keyboardType: TextInputType.number,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 12.0,
+                                      ),
+                                      decoration: InputDecoration(
+                                        contentPadding: const EdgeInsets.symmetric(
+                                            horizontal: 10.0, vertical: 14.0),
+                                        hintText: "Ingrese Telefono",
+                                        hintStyle: const TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: 12.0,
+                                        ),
+                                        filled: true,
+                                        fillColor: Colors.grey.shade100,
+                                        focusedBorder: OutlineInputBorder(
+                                            borderRadius: BorderRadius.circular(14.0),
+                                            borderSide: BorderSide.none),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(14.0),
+                                          borderSide: BorderSide.none,
+                                        ),
+                                        errorBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(14.0),
+                                          borderSide: BorderSide.none,
+                                        ),
+                                        focusedErrorBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(14.0),
+                                          borderSide: BorderSide.none,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            spacingWidth4,
+                            Expanded(
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "Celular",
+                                        style: TextStyle(
+                                          color: Color(0xff184F78),
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  spacingHeigth4,
+                                  Container(
+                                    width: 170,
+                                    padding:
+                                    const EdgeInsets.symmetric(horizontal: 0.0),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: TextFormField(
+                                      keyboardType: TextInputType.name,
+                                      maxLength: 9,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 12.0,
+                                      ),
+                                      decoration: InputDecoration(
+                                        contentPadding: const EdgeInsets.symmetric(
+                                            horizontal: 10.0, vertical: 14.0),
+                                        hintText: "Ingrese Celular",
+                                        hintStyle: const TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: 12.0,
+                                        ),
+                                        filled: true,
+                                        fillColor: Colors.grey.shade100,
+                                        focusedBorder: OutlineInputBorder(
+                                            borderRadius: BorderRadius.circular(14.0),
+                                            borderSide: BorderSide.none),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(14.0),
+                                          borderSide: BorderSide.none,
+                                        ),
+                                        errorBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(14.0),
+                                          borderSide: BorderSide.none,
+                                        ),
+                                        focusedErrorBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(14.0),
+                                          borderSide: BorderSide.none,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        spacingHeigth4,
+                        Row(
+                          children: const [
+                            Text(
+                              "Correo Electronico (Gmail)",
+                              style: TextStyle(
+                                color: Color(0xff184F78),
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        spacingHeigth2,
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 0.0),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: TextFormField(
+                            style: const TextStyle(
+                              color: Colors.black,
+                              fontSize: 12.0,
+                            ),
+                            decoration: InputDecoration(
+                              contentPadding: const EdgeInsets.symmetric(
+                                  horizontal: 16.0, vertical: 14.0),
+                              hintText: "Ingrese Correo Electronico",
+                              hintStyle: const TextStyle(
+                                color: Colors.grey,
+                                fontSize: 12.0,
+                              ),
+                              filled: true,
+                              fillColor: Colors.grey.shade100,
+                              focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(14.0),
+                                  borderSide: BorderSide.none),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(14.0),
+                                borderSide: BorderSide.none,
+                              ),
+                              errorBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(14.0),
+                                borderSide: BorderSide.none,
+                              ),
+                              focusedErrorBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(14.0),
+                                borderSide: BorderSide.none,
+                              ),
+                            ),
+                          ),
+                        ),
+                        spacingHeigth10,
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
@@ -659,6 +843,7 @@ class FormDatosFamiliares extends StatelessWidget {
                             ),
                           ],
                         ),
+
                       ],
                     ),
                   ],
