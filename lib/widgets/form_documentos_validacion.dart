@@ -15,11 +15,9 @@ class _FormDocumentosState extends State<FormDocumentos> {
 
   @override
   void initState() {
-
     documentValue = 1;
     dateInput.text = "";
     super.initState();
-
   }
 
   @override
@@ -280,7 +278,7 @@ class _FormDocumentosState extends State<FormDocumentos> {
                                 fontSize: 12.0,
                               ),
                               suffixIcon: InkWell(
-                                onTap: ()async{
+                                onTap: () async {
                                   DateTime? pickedDate = await showDatePicker(
                                       context: context,
                                       initialDate: DateTime.now(),
@@ -292,7 +290,8 @@ class _FormDocumentosState extends State<FormDocumentos> {
                                     print(
                                         pickedDate); //pickedDate output format => 2021-03-10 00:00:00.000
                                     String formattedDate =
-                                    DateFormat('dd-MM-yyyy').format(pickedDate);
+                                        DateFormat('dd-MM-yyyy')
+                                            .format(pickedDate);
                                     print(
                                         formattedDate); //formatted date output using intl package =>  2021-03-16
                                     setState(() {
@@ -325,6 +324,75 @@ class _FormDocumentosState extends State<FormDocumentos> {
                               ),
                             ),
                           ),
+                        ),
+                        spacingHeigth35,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              width: 140,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: Color(0xff53968F),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.all(10.0),
+                                child: Row(
+                                  children:[
+                                    const Icon(
+                                      Icons.cancel,
+                                      color: Colors.white,
+                                    ),
+                                    spacingWidth10,
+                                    const Text(
+                                      textAlign: TextAlign.center,
+                                      "Cancelar",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    spacingWidth6,
+
+                                  ],
+                                ),
+                              ),
+                            ),
+                            spacingHeigth4,
+                            Container(
+                              width: 140,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: Color(0xff184F78),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.all(16.0),
+                                child: Row(
+                                  children:[
+                                    Text(
+                                      textAlign: TextAlign.center,
+                                      "Continuar",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    spacingWidth10,
+                                    Icon(
+                                      Icons.arrow_forward,
+                                      color: Colors.white,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+
+
+                          ],
                         ),
                       ],
                     ),
