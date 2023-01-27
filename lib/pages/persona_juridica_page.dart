@@ -1,44 +1,28 @@
+
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:seguridad_ciudadana/pages/alertas_page.dart';
-import 'package:seguridad_ciudadana/pages/servicios_page.dart';
 import 'package:seguridad_ciudadana/widgets/form_correo.dart';
 import 'package:seguridad_ciudadana/widgets/form_datos_familiares.dart';
-import 'package:seguridad_ciudadana/widgets/form_datos_personales.dart';
-import 'package:seguridad_ciudadana/widgets/form_directorio_widgets.dart';
-import 'package:seguridad_ciudadana/widgets/form_documentos_validacion.dart';
-import 'package:seguridad_ciudadana/widgets/sizebox_widget.dart';
+import 'package:seguridad_ciudadana/widgets/form_datos_ruc.dart';
+import 'package:seguridad_ciudadana/widgets/form_ruc_documento.dart';
 
-class PersonaNatural extends StatefulWidget {
-  const PersonaNatural({Key? key}) : super(key: key);
+class PersonaJuridica extends StatefulWidget {
+  const PersonaJuridica({Key? key}) : super(key: key);
 
   @override
-  State<PersonaNatural> createState() => _PersonaNaturalState();
+  State<PersonaJuridica> createState() => _PersonaJuridicaState();
 }
 
-class _PersonaNaturalState extends State<PersonaNatural> {
+class _PersonaJuridicaState extends State<PersonaJuridica> {
 
   int indexPage = 0;
 
   List<Widget> _pages=[
-    Center(child: FormDocumentos(),),
-    Center(child: FormDatosPersonales()),
+    Center(child: FormRucDocumento()),
+    Center(child: FormDatosRuc()),
     Center(child: FormDatosFamiliares()),
     Center(child: FormCorreo()),
   ];
-
-
-
-
-
-  void alertNumerico(BuildContext context) {
-    showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return FormDirectorioWidgets();
-        });
-  }
-
 
   @override
   Widget build(BuildContext context) {

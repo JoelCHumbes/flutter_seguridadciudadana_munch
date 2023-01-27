@@ -15,11 +15,16 @@ class FormDatosFamiliares extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
-                  children: const [
-                    Icon(
-                      Icons.arrow_circle_left,
-                      size: 30,
-                      color: Color(0xff006DA3),
+                  children:  [
+                    InkWell(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: Icon(
+                        Icons.arrow_circle_left,
+                        size: 30,
+                        color: Color(0xff006DA3),
+                      ),
                     ),
                   ],
                 ),
@@ -793,13 +798,13 @@ class FormDatosFamiliares extends StatelessWidget {
                                 child: Row(
                                   children: [
                                     const Icon(
-                                      Icons.cancel,
+                                      Icons.arrow_back_ios,
                                       color: Colors.white,
                                     ),
                                     spacingWidth10,
                                     const Text(
                                       textAlign: TextAlign.center,
-                                      "Cancelar",
+                                      "Atras",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 15,
@@ -822,6 +827,7 @@ class FormDatosFamiliares extends StatelessWidget {
                               child: Padding(
                                 padding: EdgeInsets.all(16.0),
                                 child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
                                       textAlign: TextAlign.center,
@@ -834,7 +840,7 @@ class FormDatosFamiliares extends StatelessWidget {
                                     ),
                                     spacingWidth10,
                                     Icon(
-                                      Icons.arrow_forward,
+                                      Icons.arrow_forward_ios_sharp,
                                       color: Colors.white,
                                     ),
                                   ],

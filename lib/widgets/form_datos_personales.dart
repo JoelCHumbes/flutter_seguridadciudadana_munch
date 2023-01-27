@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seguridad_ciudadana/widgets/form_documentos_validacion.dart';
 import 'package:seguridad_ciudadana/widgets/sizebox_widget.dart';
 
 class FormDatosPersonales extends StatelessWidget {
@@ -15,11 +16,16 @@ class FormDatosPersonales extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
-                  children: const [
-                    Icon(
-                      Icons.arrow_circle_left,
-                      size: 30,
-                      color: Color(0xff006DA3),
+                  children: [
+                    InkWell(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: Icon(
+                        Icons.arrow_circle_left,
+                        size: 30,
+                        color: Color(0xff006DA3),
+                      ),
                     ),
                   ],
                 ),
@@ -359,34 +365,38 @@ class FormDatosPersonales extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              width: 140,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: Color(0xff53968F),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsets.all(10.0),
-                                child: Row(
-                                  children:[
-                                    const Icon(
-                                      Icons.cancel,
-                                      color: Colors.white,
-                                    ),
-                                    spacingWidth10,
-                                    const Text(
-                                      textAlign: TextAlign.center,
-                                      "Cancelar",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    spacingWidth6,
+                            InkWell(
+                              onTap:(){
+                               //Navigator.push(context, MaterialPageRoute(builder: (context)=>FormDocumentos()));
 
-                                  ],
+                               },
+                              child: Container(
+                                width: 140,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  color: Color(0xff53968F),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Row(
+                                    children: [
+                                       Icon(
+                                        Icons.arrow_back_ios,
+                                        color: Colors.white,
+                                      ),
+                                      spacingWidth10,
+                                       Text(
+                                        textAlign: TextAlign.center,
+                                        "Atras",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -401,7 +411,8 @@ class FormDatosPersonales extends StatelessWidget {
                               child: Padding(
                                 padding: EdgeInsets.all(16.0),
                                 child: Row(
-                                  children:[
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
                                     Text(
                                       textAlign: TextAlign.center,
                                       "Continuar",
@@ -413,15 +424,13 @@ class FormDatosPersonales extends StatelessWidget {
                                     ),
                                     spacingWidth10,
                                     Icon(
-                                      Icons.arrow_forward,
+                                      Icons.arrow_forward_ios_sharp,
                                       color: Colors.white,
                                     ),
                                   ],
                                 ),
                               ),
                             ),
-
-
                           ],
                         ),
                       ],

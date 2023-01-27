@@ -22,6 +22,9 @@ class _FormPoliticaState extends State<FormPolitica> {
                 children: [
 
                     InkWell(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
                       child: Icon(
                         Icons.arrow_circle_left,
                         size: 30,

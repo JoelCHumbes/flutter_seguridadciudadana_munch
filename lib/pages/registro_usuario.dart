@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seguridad_ciudadana/pages/persona_juridica_page.dart';
 import 'package:seguridad_ciudadana/pages/persona_natural_page.dart';
 import 'package:seguridad_ciudadana/widgets/sizebox_widget.dart';
 
@@ -18,13 +19,18 @@ class _RegistroUsuarioState extends State<RegistroUsuario> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding:  EdgeInsets.all(16.0),
               child: Row(
-                children: const [
-                  Icon(
-                    Icons.arrow_circle_left,
-                    size: 30,
-                    color: Color(0xff006DA3),
+                children: [
+                  InkWell(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                    child: Icon(
+                      Icons.arrow_circle_left,
+                      size: 30,
+                      color: Color(0xff006DA3),
+                    ),
                   ),
                 ],
               ),
@@ -65,9 +71,14 @@ class _RegistroUsuarioState extends State<RegistroUsuario> {
                 spacingWidth14,
                 Column(
                   children: [
-                    Image.asset(
-                      "assets/images/juri.png",
-                      height: 125,
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>PersonaJuridica()),);
+                      },
+                      child: Image.asset(
+                        "assets/images/juri.png",
+                        height: 125,
+                      ),
                     ),
                     const Text(
                       "PERSONA \n JURIDICA",

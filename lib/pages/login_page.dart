@@ -67,9 +67,9 @@ class _LoginPageState extends State<LoginPage> {
                   bottomRight: Radius.circular(42.0),
                 ),
                 image: DecorationImage(
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                   image: AssetImage(
-                    "assets/images/ff.jpg",
+                    "assets/images/seguro.png",
                   ),
                 ),
               ),
@@ -81,10 +81,10 @@ class _LoginPageState extends State<LoginPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Image.asset(
+                          /*Image.asset(
                             "assets/images/iconscho.png",
                             height: 70,
-                          ),
+                          ),*/
                           spacingHeigth20,
                         ],
                       ),
@@ -112,7 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: const [
                                   Text(
-                                    "El Salto del Fraile",
+                                    "Centro de Emergencias",
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 18.0,
@@ -134,7 +134,7 @@ class _LoginPageState extends State<LoginPage> {
                               mainAxisSize: MainAxisSize.min,
                               children: const [
                                 Icon(
-                                  Icons.beach_access_sharp,
+                                  Icons.local_police_outlined,
                                   color: Colors.white,
                                 ),
                               ],

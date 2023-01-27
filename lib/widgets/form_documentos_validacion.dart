@@ -25,7 +25,6 @@ class _FormDocumentosState extends State<FormDocumentos> {
 
   @override
   Widget build(BuildContext context) {
-
     print(apiService.RegistroUser());
 
     return Scaffold(
@@ -37,11 +36,16 @@ class _FormDocumentosState extends State<FormDocumentos> {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
-                  children: const [
-                    Icon(
-                      Icons.arrow_circle_left,
-                      size: 30,
-                      color: Color(0xff006DA3),
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Icon(
+                        Icons.arrow_circle_left,
+                        size: 30,
+                        color: Color(0xff006DA3),
+                      ),
                     ),
                   ],
                 ),
@@ -335,34 +339,38 @@ class _FormDocumentosState extends State<FormDocumentos> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              width: 140,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: Color(0xff53968F),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsets.all(10.0),
-                                child: Row(
-                                  children:[
-                                    const Icon(
-                                      Icons.cancel,
-                                      color: Colors.white,
-                                    ),
-                                    spacingWidth10,
-                                    const Text(
-                                      textAlign: TextAlign.center,
-                                      "Cancelar",
-                                      style: TextStyle(
+                            InkWell(
+                              onTap: () {
+                                Navigator.pop(context);
+                              },
+                              child: Container(
+                                width: 140,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  color: Color(0xff53968F),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.cancel,
                                         color: Colors.white,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold,
                                       ),
-                                    ),
-                                    spacingWidth6,
-
-                                  ],
+                                      spacingWidth10,
+                                      Text(
+                                        textAlign: TextAlign.center,
+                                        "Cancelar",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      spacingWidth6,
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -377,7 +385,7 @@ class _FormDocumentosState extends State<FormDocumentos> {
                               child: Padding(
                                 padding: EdgeInsets.all(16.0),
                                 child: Row(
-                                  children:[
+                                  children: [
                                     Text(
                                       textAlign: TextAlign.center,
                                       "Continuar",
@@ -396,8 +404,6 @@ class _FormDocumentosState extends State<FormDocumentos> {
                                 ),
                               ),
                             ),
-
-
                           ],
                         ),
                       ],
