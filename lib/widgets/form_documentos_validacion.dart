@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:seguridad_ciudadana/services/api_service.dart';
 import 'package:seguridad_ciudadana/widgets/sizebox_widget.dart';
 
 class FormDocumentos extends StatefulWidget {
@@ -13,6 +14,8 @@ class _FormDocumentosState extends State<FormDocumentos> {
   int documentValue = 0;
   TextEditingController dateInput = TextEditingController();
 
+  ApiService apiService = ApiService();
+
   @override
   void initState() {
     documentValue = 1;
@@ -22,6 +25,9 @@ class _FormDocumentosState extends State<FormDocumentos> {
 
   @override
   Widget build(BuildContext context) {
+
+    print(apiService.RegistroUser());
+
     return Scaffold(
       backgroundColor: const Color(0xffFFFFFF),
       body: SafeArea(

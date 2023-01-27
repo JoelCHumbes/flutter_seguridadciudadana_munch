@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:seguridad_ciudadana/pages/home_page.dart';
+import 'package:seguridad_ciudadana/pages/registro_usuario.dart';
 import 'package:seguridad_ciudadana/widgets/form_directorio_widgets.dart';
 import 'package:seguridad_ciudadana/widgets/sizebox_widget.dart';
 
@@ -12,6 +13,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool isInvisible = true;
+
   void alertNumerico(BuildContext context) {
     showDialog(
         context: context,
@@ -66,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage(
-                    "assets/images/fraile.jpg",
+                    "assets/images/ff.jpg",
                   ),
                 ),
               ),
@@ -94,6 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                           vertical: 18.0,
                         ),
                         decoration: BoxDecoration(
+                          // color: Colors.white.withOpacity(0.68),
                           color: Colors.white.withOpacity(0.68),
                           borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(14.0),
@@ -143,19 +147,30 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
+            spacingHeigth10,
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: [
                   spacingHeigth14,
-                  Text(
-                    "INICIA SESION",
-                    style: TextStyle(
-                      color: Color(0xff184F78),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      letterSpacing: 1,
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(
+                        Icons.person,
+                        color: Color(0xff184F78),
+                      ),
+                      spacingWidth4,
+                      const Text(
+                        "INICIA SESION",
+                        style: TextStyle(
+                          color: Color(0xff184F78),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          letterSpacing: 1,
+                        ),
+                      ),
+                    ],
                   ),
                   spacingHeigth20,
                   Column(
@@ -178,6 +193,9 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: Color(0xff878787).withOpacity(0.5),
+                          ),
                         ),
                         child: TextFormField(
                           keyboardType: TextInputType.number,
@@ -192,6 +210,9 @@ class _LoginPageState extends State<LoginPage> {
                             hintStyle: const TextStyle(
                               color: Colors.grey,
                               fontSize: 12.0,
+                            ),
+                            prefixIcon: const Icon(
+                              Icons.credit_card,
                             ),
                             filled: true,
                             fillColor: Colors.grey.shade100,
@@ -232,8 +253,12 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: Color(0xff878787).withOpacity(0.5),
+                          ),
                         ),
                         child: TextFormField(
+                          obscureText: isInvisible,
                           style: const TextStyle(
                             color: Colors.black,
                             fontSize: 12.0,
@@ -246,6 +271,17 @@ class _LoginPageState extends State<LoginPage> {
                               color: Colors.grey,
                               fontSize: 12.0,
                             ),
+                            suffixIcon: IconButton(
+                              //Operador ternario
+                              icon: isInvisible == true
+                                  ? Icon(Icons.remove_red_eye)
+                                  : Icon(Icons.remove_red_eye_outlined),
+                              onPressed: () {
+                                isInvisible = !isInvisible;
+                                setState(() {});
+                              },
+                            ),
+                            prefixIcon: const Icon(Icons.lock),
                             filled: true,
                             fillColor: Colors.grey.shade100,
                             focusedBorder: OutlineInputBorder(
@@ -266,47 +302,69 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
-                      spacingHeigth14,
-                      Container(
-                        width: 150,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Color(0xff53968F),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.all(10.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const Text(
-                                textAlign: TextAlign.center,
-                                "Ingresar",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
+                      spacingHeigth18,
+                      InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                        },
+                        child: Container(
+                          width: 150,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            color: Color(0xff53968F),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.all(10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Text(
+                                  textAlign: TextAlign.center,
+                                  "Ingresar",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                              ),
-                              spacingWidth6,
-                              const Icon(
-                                Icons.arrow_forward_ios_sharp,
-                                color: Colors.white,
-                              ),
-                            ],
+                                spacingWidth6,
+                                const Icon(
+                                  Icons.arrow_forward_ios_sharp,
+                                  color: Colors.white,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
                       spacingHeigth8,
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
+                          const Text(
                             "Eres Nuevo?",
-                          ),
-                          Text(
-                            "Crea tu Cuenta",
                             style: TextStyle(
-                              color: Color(0xff184F78),
+                              color: Colors.grey,
+                              fontWeight: FontWeight.normal,
+                              fontSize: 12,
+                            ),
+                          ),
+                          spacingWidth6,
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => RegistroUsuario()));
+                            },
+                            child: const Text(
+                              "Crea tu Cuenta",
+                              style: TextStyle(
+                                color: Color(0xff184F78),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
                             ),
                           ),
                         ],

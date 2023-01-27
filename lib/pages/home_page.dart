@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
 import 'package:seguridad_ciudadana/pages/alertas_page.dart';
+import 'package:seguridad_ciudadana/pages/notificaciones_page.dart';
 import 'package:seguridad_ciudadana/pages/servicios_page.dart';
 import 'package:seguridad_ciudadana/utils/assets_svg.dart';
 import 'package:seguridad_ciudadana/utils/general/colors.dart';
@@ -22,7 +23,7 @@ class _HomePageState extends State<HomePage> {
   List<Widget> _pages=[
     Center(child: AlertasPage(),),
     Center(child: ServiciosPage()),
-    Center(child: Text("Notificaciones",),),
+    Center(child: NotificacionPage()),
     Center(child: Text("Mi Perfil",),),
   ];
 
